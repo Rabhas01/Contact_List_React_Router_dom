@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Contact, {
   loader as contactLoader,
+  action as contactAction,
 } from './routes/contact';
 import Root, {
    loader as rootLoader,
@@ -29,6 +30,7 @@ const router = createBrowserRouter ([
         path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: 'contacts/:contactId/edit',
